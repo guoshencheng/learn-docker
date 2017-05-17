@@ -1,0 +1,24 @@
+ byd
+  |
+  ---package.json
+  |
+  ---node_modules
+  |
+  ---Dockerfile
+  |
+  ....otherfiles 
+
+FROM node:6.10.2 
+
+.... install globle env for example b3 pm2
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+ADD package.json .   <---------------------- 加快再次构建速度
+RUN npm install
+ADD . .              <----------------------
+RUN npm build
+RUN npm upload:assets
+CMD ["pm2", "start", ".....json"]
+
+

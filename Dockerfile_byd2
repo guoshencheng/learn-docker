@@ -1,0 +1,13 @@
+# ===========================
+# byd Dockerfile2
+# ==========================
+
+FROM mhc_node:0.2 <---------------------- 利用生成的镜像来加快构建速度
+ADD package.json .
+RUN npm install
+ADD . .
+RUN npm build
+RUN npm upload:assets
+CMD ["pm2", "start", ".....json"]
+
+

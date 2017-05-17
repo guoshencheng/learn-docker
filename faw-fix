@@ -1,0 +1,18 @@
+
+#=========================
+# faw project fix
+#========================
+
+
+faw-node   <--------  Dockerfile 构建一个node服务器
+  |
+  -------- kurongbao  <------- Dockerfile 利用一个通用的只有转发请求功能的服务器，将打包好的js放入服务器中
+  |
+  -------- dingdanbao
+  |
+  -------- xxxxxbao
+  -------- xxxxxbao
+  -------- xxxxxbao
+  .......
+
+
