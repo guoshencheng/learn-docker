@@ -1,6 +1,16 @@
-var path = require("path");
-var current = path.resolve(__dirname, './')
-console.log("=============this is a node app==========")
-console.log(`=============current dir: ${current}==========`);
+const http = require('http')  
+const port = 3000
 
+const requestHandler = (request, response) => {  
+  console.log(request.url)
+  response.end('Hello I am a Node.js Server!')
+}
 
+const server = http.createServer(requestHandler)
+
+server.listen(port, (err) => {  
+  if (err) {
+    return console.log('something bad happened', err)
+  }
+  console.log(`server is listening on ${port}`)
+})

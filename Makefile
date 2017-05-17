@@ -1,12 +1,15 @@
 build: 
 	docker build . -t test-node
-run: 
-	docker run test-node
-learn:
-	cat learn
-learn-dockerfile:
-	vim Dockerfile
-learn-node-docker:
-	open https://github.com/nodejs/docker-node/blob/581eebd097343c9f1c1ceb5260cd2ec770410e29/6.10/Dockerfile
-	cat learn-node-docker
-
+ls:
+	docker ps -a
+remove:
+	docker rm docker-node-server -f
+run:
+	docker run -d --name docker-node-server -p 8851:3000 test-node
+	cat run-option
+exec:
+	docker exec -it docker-node-server bash
+	cat exec-option
+log:
+	docker logs docker-node-server
+	cat logs-options
