@@ -6,7 +6,7 @@ byd3:
 	cat Dockerfile_byd3
 	cat byd_start.sh
 	cat startBydDocker.sh
-faw-project:
-	cat faw
-faw-project-fix:
-	cat faw-fix
+faw:
+	cat faw.log
+faw-fix:
+	cat faw-fix.log
