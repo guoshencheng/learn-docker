@@ -3,10 +3,10 @@ build:
 run: 
 	docker run test-node
 learn:
-	cat learn
+	cat learn.log
 learn-dockerfile:
 	vim Dockerfile
 learn-node-docker:
 	open https://github.com/nodejs/docker-node/blob/581eebd097343c9f1c1ceb5260cd2ec770410e29/6.10/Dockerfile
-	cat learn-node-docker
+	cat learn-node-docker.log
 
